@@ -1,0 +1,122 @@
+ARM Linker, 5.03 [Build 76] [MDK-ARM Lite]
+
+==============================================================================
+
+Section Cross References
+
+    servocontrol.o(MyCode) refers to servocontrol.o(Start) for SystemInit
+    servocontrol.o(MyCode) refers to servocontrol.o(MyData) for TxRec
+    servocontrol.o(MyCode) refers to servocontrol.o(MyConst) for UserPrmp
+    servocontrol.o(RESET) refers to servocontrol.o(SSTACK) for SP_INIT
+    servocontrol.o(RESET) refers to servocontrol.o(MyCode) for Reset_Handler
+    servocontrol.o(RESET) refers to servocontrol.o(Start) for Dummy_Handler
+
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    RESET                                    0x00000000   Section      192  servocontrol.o(RESET)
+    ServoControl.s                           0x00000000   Number         0  servocontrol.o ABSOLUTE
+    Start                                    0x000000c0   Section      248  servocontrol.o(Start)
+    SystemInit                               0x000000c1   Thumb Code     0  servocontrol.o(Start)
+    SetClock48MHz                            0x000000f7   Thumb Code     0  servocontrol.o(Start)
+    Dummy_Handler                            0x00000195   Thumb Code     0  servocontrol.o(Start)
+    MyConst                                  0x000001b8   Section      116  servocontrol.o(MyConst)
+    NewLineP                                 0x000001b8   Data           3  servocontrol.o(MyConst)
+    UserPrmp                                 0x000001bb   Data          28  servocontrol.o(MyConst)
+    OrgnPrmp                                 0x000001d7   Data          25  servocontrol.o(MyConst)
+    NewPrmp                                  0x000001f0   Data          20  servocontrol.o(MyConst)
+    SerPPrmp                                 0x00000204   Data          17  servocontrol.o(MyConst)
+    DAC0_TABLE                               0x00000218   Data           0  servocontrol.o(MyConst)
+    PWM_DUTY_TABLE                           0x00000222   Data           0  servocontrol.o(MyConst)
+    .ARM.__at_0x400                          0x00000400   Section       16  servocontrol.o(.ARM.__at_0x400)
+    MyCode                                   0x00000410   Section     1168  servocontrol.o(MyCode)
+    UART1_ISR                                0x000007bd   Thumb Code     2  servocontrol.o(MyCode)
+    MyData                                   0x20000000   Section      200  servocontrol.o(MyData)
+    TxRec                                    0x20000000   Data          18  servocontrol.o(MyData)
+    TxBuff                                   0x20000014   Data          80  servocontrol.o(MyData)
+    RxRec                                    0x20000064   Data          18  servocontrol.o(MyData)
+    RxBuff                                   0x20000078   Data          80  servocontrol.o(MyData)
+    SSTACK                                   0x200000c8   Section      256  servocontrol.o(SSTACK)
+    SP_INIT                                  0x200001c8   Data           0  servocontrol.o(SSTACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv3M$S$PE$A:L22$X:L11$S22$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$STANDARDLIB$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __Vectors                                0x00000000   Data           0  servocontrol.o(RESET)
+    Reset_Handler                            0x00000411   Thumb Code     0  servocontrol.o(MyCode)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x00000411
+
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00000a68, Max: 0x00020000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Base: 0x00000000, Size: 0x000008a0, Max: 0x00020000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x000000c0   Data   RO            5    RESET               servocontrol.o
+    0x000000c0   0x000000f8   Code   RO            2    Start               servocontrol.o
+    0x000001b8   0x00000074   Data   RO            6    MyConst             servocontrol.o
+    0x0000022c   0x000001d4   PAD
+    0x00000400   0x00000010   Code   RO            1    .ARM.__at_0x400     servocontrol.o
+    0x00000410   0x00000490   Code   RO            4  * MyCode              servocontrol.o
+
+
+    Execution Region RW_IRAM2 (Base: 0x20000000, Size: 0x000001c8, Max: 0x00008000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x000000c8   Data   RW            7    MyData              servocontrol.o
+    0x200000c8   0x00000100   Data   RW            3    SSTACK              servocontrol.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+      1432        240        308        456          0       1080   servocontrol.o
+
+    ----------------------------------------------------------------------
+      1432        240        776        456          0       1080   Object Totals
+         0          0          0          0          0          0   (incl. Generated)
+         0          0        468          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+         0          0          0          0          0          0   Library Totals
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      1432        240        776        456          0       1080   Grand Totals
+      1432        240        776        456          0       1080   ELF Image Totals
+      1432        240        776        456          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 2208 (   2.16kB)
+    Total RW  Size (RW Data + ZI Data)               456 (   0.45kB)
+    Total ROM Size (Code + RO Data + RW Data)       2664 (   2.60kB)
+
+==============================================================================
+

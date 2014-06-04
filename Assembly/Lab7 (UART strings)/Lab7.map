@@ -1,0 +1,121 @@
+ARM Linker, 5.03 [Build 76] [MDK-ARM Lite]
+
+==============================================================================
+
+Section Cross References
+
+    lab7m.o(RESET) refers to lab7m.o(SSTACK) for SP_INIT
+    lab7m.o(RESET) refers to lab7m.o(MyCode) for Reset_Handler
+    lab7m.o(Start) refers to lab7m.o(MyConst) for __EndMyConst
+    lab7m.o(Start) refers to lab7m.o(.ARM.__at_0x400) for __END_FCF
+    lab7m.o(Start) refers to lab7m.o(MyCode) for __EndMyCode
+    lab7m.o(Start) refers to lab7m.o(MyData) for MyData
+    lab7m.o(MyCode) refers to lab7m.o(Start) for SystemInit
+    lab7m.o(MyCode) refers to lab7m.o(MyData) for String
+    lab7m.o(MyCode) refers to lab7m.o(MyConst) for LenString
+
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    RESET                                    0x00000000   Section      192  lab7m.o(RESET)
+    Lab7M.s                                  0x00000000   Number         0  lab7m.o ABSOLUTE
+    MyCode                                   0x000000c0   Section      432  lab7m.o(MyCode)
+    PutChar                                  0x000001d1   Thumb Code     0  lab7m.o(MyCode)
+    DIVU                                     0x000001e3   Thumb Code     2  lab7m.o(MyCode)
+    __EndMyCode                              0x00000240   Data           0  lab7m.o(MyCode)
+    Start                                    0x00000270   Section      300  lab7m.o(Start)
+    SystemInit                               0x00000271   Thumb Code     0  lab7m.o(Start)
+    SetClock48MHz                            0x000002cd   Thumb Code     0  lab7m.o(Start)
+    MyConst                                  0x0000039c   Section       24  lab7m.o(MyConst)
+    Prompt                                   0x0000039c   Data          16  lab7m.o(MyConst)
+    LenString                                0x000003ac   Data           8  lab7m.o(MyConst)
+    __EndMyConst                             0x000003b4   Data           0  lab7m.o(MyConst)
+    .ARM.__at_0x400                          0x00000400   Section       16  lab7m.o(.ARM.__at_0x400)
+    __END_FCF                                0x00000410   Data           0  lab7m.o(.ARM.__at_0x400)
+    MyData                                   0x20000000   Section       80  lab7m.o(MyData)
+    String                                   0x20000000   Data          79  lab7m.o(MyData)
+    SSTACK                                   0x20000050   Section      256  lab7m.o(SSTACK)
+    __EndMyData                              0x20000050   Data           0  lab7m.o(MyData)
+    SP_INIT                                  0x20000150   Data           0  lab7m.o(SSTACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv3M$S$PE$A:L22$X:L11$S22$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$STANDARDLIB$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __Vectors                                0x00000000   Data           0  lab7m.o(RESET)
+    Reset_Handler                            0x000000c1   Thumb Code     0  lab7m.o(MyCode)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x000000c1
+
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x00000560, Max: 0x00020000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Base: 0x00000000, Size: 0x00000410, Max: 0x00020000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x000000c0   Data   RO            2    RESET               lab7m.o
+    0x000000c0   0x000001b0   Code   RO            5  * MyCode              lab7m.o
+    0x00000270   0x0000012c   Code   RO            3    Start               lab7m.o
+    0x0000039c   0x00000018   Data   RO            6    MyConst             lab7m.o
+    0x000003b4   0x0000004c   PAD
+    0x00000400   0x00000010   Code   RO            1    .ARM.__at_0x400     lab7m.o
+
+
+    Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00000150, Max: 0x00003000, ABSOLUTE)
+
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000   0x00000050   Data   RW            7    MyData              lab7m.o
+    0x20000050   0x00000100   Data   RW            4    SSTACK              lab7m.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       748        126        216        336          0        780   lab7m.o
+
+    ----------------------------------------------------------------------
+       748        126        292        336          0        780   Object Totals
+         0          0          0          0          0          0   (incl. Generated)
+         0          0         76          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+         0          0          0          0          0          0   Library Totals
+         0          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+       748        126        292        336          0        780   Grand Totals
+       748        126        292        336          0        780   ELF Image Totals
+       748        126        292        336          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 1040 (   1.02kB)
+    Total RW  Size (RW Data + ZI Data)               336 (   0.33kB)
+    Total ROM Size (Code + RO Data + RW Data)       1376 (   1.34kB)
+
+==============================================================================
+

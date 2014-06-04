@@ -1,0 +1,46 @@
+Python/CS1 Project/Logs/
+*.iex
+*.class
+*.zip
+*.d
+*.prefs
+*.axf
+*.lnp
+*.o
+*.sct
+*.Dave
+*.bak
+*.htm
+*.drd3073
+*.uvopt
+*.uvproj
+Assembly/Lab10 (Interupt based UART driver)/PreLab.txt
+*.dep
+*.crf
+Java/Lab 3 (Schedual)/src/CVS/
+Java/Lab 3 (Schedual)/.settings/CVS/
+Java/Lab 3 (Schedual)/CVS/
+Assembly/Lab11 (Servo Control, PWN, DAC,ADC)/PreLab11.txt
+*.pyc
+Python/CS1 Project (Game AI)/Logs/
+Python/Lab 2-Tetravex (backtracking algorithm)/Notes.txt
+*.project
+Python/Lab 1 (depth-first searchof tree)/sixdegrees(old).py
+Java/Lab 9 (Collection, iterator implmenation)/src/CVS/
+Java/Lab 5 (Game Night, class abstraction)/src/CVS/
+Java/Lab 10(Nurikabe, java swing)/.settings/CVS/
+Java/Lab 10(Nurikabe, java swing)/CVS/
+Java/Lab 10(Nurikabe, java swing)/src/CVS/
+Java/Lab 12(TrollsBridge, threading)/.settings/CVS/
+Java/Lab 12(TrollsBridge, threading)/CVS/
+Java/Lab 12(TrollsBridge, threading)/src/CVS/
+Java/Lab 5 (Game Night, class abstraction)/.settings/CVS/
+Java/Lab 5 (Game Night, class abstraction)/CVS/
+Java/Lab 6(Heap implemenation)/.settings/CVS/
+Java/Lab 6(Heap implemenation)/CVS/
+Java/Lab 6(Heap implemenation)/src/CVS/
+Java/Lab 7(Map datastructures)/.settings/CVS/
+Java/Lab 7(Map datastructures)/CVS/
+Java/Lab 7(Map datastructures)/src/CVS/
+Java/Lab 9 (Collection, iterator implmenation)/CVS/
+Java/Lab 9 (Collection, iterator implmenation)/.settings/CVS/

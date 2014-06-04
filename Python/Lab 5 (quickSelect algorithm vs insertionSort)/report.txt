@@ -1,0 +1,17 @@
+1.      The Purpose of pivot is just to find a reference so the list can be split. 
+	Picking the pivot as the first item would make no difference.
+
+2. 	Test Cases:
+	
+	input list:	        k:  	output:
+	[70,120,170,200]	1	120
+	[120,200,70,120]	1	120
+	[200,70,170,120]	0	70
+	[70,170,120,200]	3	200
+
+
+
+3. 	Simple Median times:		quickSelect times:
+	20.294752178132775		0.3378461864548588
+	20.139206836157562		0.33778193014357267
+	20.096386698051116		0.33658939547751584

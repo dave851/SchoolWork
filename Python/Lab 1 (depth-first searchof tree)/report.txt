@@ -1,0 +1,39 @@
+Test case 1:
+
+Test if it can find a bacon link
+
+File: test1.txt
+Start Name: John Cusack
+End Name: Kevin Bacon
+
+Expected result:
+
+John Cusack
+was in OneCrazySummer with
+Demi Moore
+was in AFewGoodMen with
+Kevin Bacon
+
+Test Case 2:
+
+Test where there is no link
+
+File: test2.txt
+Start Name: Demi Moore
+End Name: Forever Alone
+
+Expected result:
+
+No link
+
+Test Case 3:
+
+Return no link when shortest link is more then three people
+
+File: test3.txt
+Start Name: Demi More
+End Name: Backup Actor
+
+Expected result:
+
+No link

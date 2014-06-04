@@ -1,0 +1,12 @@
+Question one:
+	Using the orginal hash_function and the words.txt file
+	there is an imballance of about 0.13
+	
+Question two:
+	Using my hash_function and the words.txt file
+	there is an imballance of about 7.05 (size 100000)
+
+Question three:
+	A hashing function that leads to alot of collisions will
+	force the table to rehash more often resulting in a longer
+	run time

@@ -1,0 +1,87 @@
+David Desrochers
+Lab 9 PreLab
+4/1/2014
+
+
+NOTE: StringLen is subroutine that returns lenght of string
+
+;**************************************************************
+;CopyString
+;Creates a null terminated string in memory starting at the
+;address in R1 by copying the characters from a null 
+;terminated string in from memory starting at address in R0
+;Input: R0: source string memory location
+;	R1: destination string memory location
+;Modify: PSR
+;**************************************************************
+;R0: Source memory location
+;R1: String index
+;R2: Dest memory location
+;R3: Character moving
+CopyString	PUSH{R1-R3, LR}
+		MOVS R2, R1
+		BL   StringLen
+		SUBS R1, #1
+Copying		CMP  R1, #0
+		BLO  DoneCopy
+		LDRB R3, [R0, R1]
+		STRB R3, [R2, R1]
+		SUBS R1, #1
+		B    Copying
+DoneCopy	POP{R1-R3, PC}
+
+;**************************************************************
+;Reverse String
+;Creates a null terminated string in memory starting at the
+;address in R1 by reversing the characters from a null 
+;terminated string in from memory starting at address in R0
+;Input: R0: source string memory location
+;	R1: destination string memory location
+;Modify: PSR
+;**************************************************************
+;R0: Source memory location
+;R1: String index for source
+;R2: Dest memory location
+;R3: String index for Dest
+;R4: Character moving
+RevString	PUSH{R1-R4, LR}
+		MOVS R2, R1
+		MOVS R3, #0
+		BL   StringLen
+		SUBS R1, #1
+Reverse		CMP  R1, #0
+		BLO  DoneRev
+		LDRB R4, [R0, R1]
+		STRB R4, [R2, R3]
+		SUBS R1, #1
+		ADDS R3, #1
+		B    Reverse
+DoneRev		POP{R1-R4, PC}
+
+;**************************************************************
+;SearchString
+;Searchs the null terminated string in memory starting at the 
+;address in R1 for the character in R0. If that character is
+;present in the string, on return the value in R2 will be the
+;position in the string.
+;Input: R0: search character
+;	R1: string to search memory location
+;Output:R2: position in string
+;Modify: R2, PSR
+;**************************************************************
+;R0: search character
+;R1: string to search memory location
+;R2: position in string - output
+;R3: Character
+SearchS    PUSH{R3}
+	   MOVS R2, #0
+Search	   LDRB R3, [R1, R2]
+	   CMP  R0, R3
+	   BEQ  Found
+	   CMP  R3, #0
+	   BEQ  NotFound
+	   ADDS R2, #1
+	   B    Search
+NotFound   MOVS R2, #0
+Found	   POP{R3}
+	   BX   LR

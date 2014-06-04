@@ -1,0 +1,43 @@
+Ta: sun 5/12 11 - 1 70-1400
+Csc: Fri 5/10 6 - 8 70-1400
+SSE: Sun 5/12 6 - 8 SSE Labs
+
+
+
+
+
+
+
+
+
+
+
+Test Cases:
+
+heapFromList:
+	Case one:
+		Input a list with only one element
+	Case two:
+		Input a list with 4 elements, [1,2,3,4]
+	Case three:
+		Input a list of 4 elements mixed order [2,3,1,4]
+		
+	Note:
+		Str method used to display end heap
+
+removeTop:
+	Case one:
+		Input a heap with only one element
+	Case two:
+		Input a heap with 4 elements
+	
+	Note:
+		Str method used to display end heap
+
+heapSort:
+	Case one:
+		Input a list with only one element
+	Case two:
+		Input a list with 4 elements, [1,2,3,4]
+	Case three:
+		Input a list of 4 elements mixed order [2,3,1,4]
